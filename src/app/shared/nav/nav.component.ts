@@ -3,12 +3,21 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+interface Link {
+	title: string;
+	route: string;
+}
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
+	navLinks: Link[] = [
+		{ title: 'Games', route: '/games' },
+		{ title: 'Log In', route: '/login' }
+	]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
