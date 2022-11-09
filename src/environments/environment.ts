@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	firebase: {
+		projectId: 'argus-dev-5f865',
+		appId: '1:382155081839:web:588ab33f7ef8e7fc29e59a',
+		storageBucket: 'argus-dev-5f865.appspot.com',
+		apiKey: 'AIzaSyCFGwV-EhW7u2qlBh1LoTSv_Zbe7ek-e9I',
+		authDomain: 'argus-dev-5f865.firebaseapp.com',
+		messagingSenderId: '382155081839',
+		measurementId: 'G-0BGB9TZVW7',
+	},
+	production: false
 };
 
 /*

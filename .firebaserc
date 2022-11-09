@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "argus-dev-5f865": {
+      "hosting": {
+        "argus": [
+          "argus-dev-5f865"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "argus-dev-5f865"
+  }
+}
