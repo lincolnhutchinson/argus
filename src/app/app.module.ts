@@ -12,39 +12,31 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavComponent } from './shared/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { HomePageComponent } from './home-page/home-page.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    HomePageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
-    BrowserAnimationsModule,
-	MatToolbarModule,
- LayoutModule,
- MatButtonModule,
- MatSidenavModule,
- MatIconModule,
- MatListModule
-  ],
-  providers: [
-    ScreenTrackingService,UserTrackingService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HomePageComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		provideFirebaseApp(() => initializeApp(environment.firebase)),
+			provideAnalytics(() => getAnalytics()),
+			provideAuth(() => getAuth()),
+			provideFirestore(() => getFirestore()),
+			provideStorage(() => getStorage()),
+			BrowserAnimationsModule,
+		MatToolbarModule,
+		LayoutModule,
+		SharedModule
+	],
+	providers: [
+		ScreenTrackingService,UserTrackingService
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
