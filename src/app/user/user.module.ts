@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GoogleSigninDirective } from './google-signin.directive';
-
+import {UserRoutingModule} from './user-routing.module';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { GoogleSigninDirective } from './google-signin.directive';
     GoogleSigninDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+	UserRoutingModule
   ]
 })
 export class UserModule { }
