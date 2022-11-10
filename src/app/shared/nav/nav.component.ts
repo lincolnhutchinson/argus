@@ -16,7 +16,7 @@ interface Link {
 })
 export class NavComponent {
 	navLinks: Link[] = [
-		{ title: 'Games', route: '/games' },
+		//{ title: 'Games', route: '/games' },
 	]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
