@@ -23,7 +23,10 @@
 			<span class="fill-gap"></span>
 
 			<div *ngIf="!(isHandset$ | async)">
-				<button *ngFor="let link of navLinks" routerLink="{{ link.route }}" mat-button>{{ link.title }}</button>
+				<a *ngFor="let link of navLinks" routerLink="{{ link.route }}" mat-button>{{ link.title }}</a>
+
+				<a mat-button *ngIf="!(auth.isLoggedIn())" routerLink="/login">Log In</a>
+				<a mat-button *ngIf="auth.isLoggedIn()" routerLink="/logout">Log Out</a>
 			</div>
 		</mat-toolbar>
 

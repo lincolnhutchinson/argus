@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import {UserAuthService} from 'src/app/user/user-auth.service';
 
 interface Link {
 	title: string;
@@ -16,7 +17,6 @@ interface Link {
 export class NavComponent {
 	navLinks: Link[] = [
 		{ title: 'Games', route: '/games' },
-		{ title: 'Log In', route: '/login' }
 	]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -25,6 +25,6 @@ export class NavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public auth: UserAuthService) {}
 
 }
