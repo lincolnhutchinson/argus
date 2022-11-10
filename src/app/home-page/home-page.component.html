@@ -1,1 +1,4 @@
-<p>home-page works!</p>
+<main>
+	<h1>Welcome to the Argus Project</h1>
+	<h3 *ngIf="auth.isLoggedIn()">Hello, {{ auth.getUserDisplayName() }}</h3>
+</main>
