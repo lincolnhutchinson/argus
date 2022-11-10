@@ -1,3 +1,5 @@
 <main>
+	<h1 *ngIf="!(auth.isLoggedIn())">Welcome! Log In!</h1>
+	<h1 *ngIf="auth.isLoggedIn()">Hello, {{ auth.getUserID() }}</h1>
 	<button appGoogleSignin mat-raised-button class="google-btn"><img src="/assets/google_signin_buttons/web/vector/btn_google_dark_normal_ios.svg"> Log in with Google</button>
 </main>
