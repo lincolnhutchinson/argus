@@ -26,7 +26,7 @@
 				<a *ngFor="let link of navLinks" routerLink="{{ link.route }}" mat-button>{{ link.title }}</a>
 
 				<a mat-button *ngIf="!(auth.isLoggedIn())" routerLink="/login">Log In</a>
-				<a mat-button *ngIf="auth.isLoggedIn()" routerLink="/logout">Log Out</a>
+				<a mat-button *ngIf="auth.isLoggedIn()" (click)="auth.logout()">Log Out</a>
 			</div>
 		</mat-toolbar>
 
