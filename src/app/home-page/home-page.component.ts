@@ -15,15 +15,11 @@ export class HomePageComponent {
 			if (matches) {
 				return [
 					{ title: 'Games', cols: 1, rows: 1 },
-					{ title: 'Popular Games', cols: 1, rows: 1 },
-					{ title: 'Your Friends Are Playing...', cols: 1, rows: 1 },
 				];
 			}
 
 			return [
-				{ title: 'Your Backlog', cols: 2, rows: 1 },
-				{ title: 'Popular Games', cols: 1, rows: 1 },
-				{ title: 'Your Friends Are Playing...', cols: 1, rows: 1 },
+				{ title: 'Games', cols: 2, rows: 1 },
 			];
 		})
 	);
